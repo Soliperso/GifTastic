@@ -1,13 +1,30 @@
+/* *******************************
+    GENERAL
+*********************************/
 body {
     margin-top: 10px;
 }
 
+/* *******************************
+    FORM INPUT
+*********************************/
 #animal-input {
     color: forestgreen;
     border: 1px solid forestgreen;
     outline: none;
 }
 
+#plusBtn {
+    color: #fff;
+    background-color: forestgreen;
+    float: right;
+    border-radius: 50%;
+    padding: 5px;
+}
+
+/* *******************************
+    SUBMIT BUTTON
+*********************************/
 #add-animal {
     background: url('../images/images.jpeg') no-repeat;
     background-size: contain;
@@ -16,6 +33,9 @@ body {
     outline: none;
 }
 
+/* *******************************
+    ANIMAL BUTTONS LIST 
+*********************************/
 button.animal {
     background-image: linear-gradient(green, lightgreen, white);
     margin: 5px;
@@ -25,28 +45,40 @@ button.animal {
 }
 
 
-
+/* *******************************
+    IMAGES STYLES
+*********************************/
 img {
     border-radius: 5px;
-    border: 3px ridge green;
-    width: 300px;
+    border: 10px ridge green;
+    width: 350px;
     height: 200px;
     margin: 15px;
 }
 
+
+/* *******************************
+    IMAGE DIV CONTAINER
+*********************************/
 .divContainer {
     float: left;
 }
 
+
+/* *******************************
+    RATING PARAGRAPH
+*********************************/
 .divContainer p {
     border-radius: 5px;
-    width: 300px;
+    width: 350px;
     background-color: green;
     margin: 5px 5px 5px 15px;
-    ;
+    box-shadow: 2px 2px 2px #fff;
     padding: 10px;
     color: #fff;
+    text-shadow: 1px 1px 1px #000;
 }
+
 
 
 #button-display {
@@ -58,9 +90,39 @@ img {
     margin-bottom: 50px;
 }
 
-
+/* *******************************
+    GIFS 
+*********************************/
 #animals-view {
-    border-top: 1px solid #000;
-    background-color: #ccc;
+    border-top: 1px solid #ccc;
+    ;
+    background-color: #c3c3c3;
     margin-top: 50px;
+}
+
+
+
+/* *******************************
+    RESPONSIVENESS
+*********************************/
+@media screen and (max-width: 768px) {
+    img,
+    .divContainer p {
+        width: 330px;
+    }
+}
+
+
+@media screen and (max-width: 375px) {
+    img {
+        width: 345px;
+    }
+}
+
+
+@media screen and (max-width: 900px) {
+    img,
+    .divContainer p {
+        width: 330px;
+    }
 }

@@ -64,9 +64,16 @@ function createBtn() {
 $('#add-animal').on('click', function (event) {
     event.preventDefault();
 
-    let animal = $('#animal-input').val().trim();
-    animals.push(animal);
+    // Prevents from submitting an empty form
+    if ($('#animal-input').val() !== '') {
+        let animal = $('#animal-input').val().trim().toLowerCase();
+        animals.push(animal);
+    }
+
     createBtn();
+    
+    
+    $('.form-control').val('');
 });
 
 
