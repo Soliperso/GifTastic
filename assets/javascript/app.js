@@ -71,8 +71,6 @@ $('#add-animal').on('click', function (event) {
     }
 
     createBtn();
-    
-    
     $('.form-control').val('');
 });
 

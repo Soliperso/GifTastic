@@ -69,9 +69,8 @@ img {
     RATING PARAGRAPH
 *********************************/
 .divContainer p {
-    border-radius: 5px;
     width: 350px;
-    background-color: green;
+    background-color: rgb(66, 196, 66);
     margin: 5px 5px 5px 15px;
     box-shadow: 2px 2px 2px #fff;
     padding: 10px;
