@@ -1,0 +1,66 @@
+body {
+    margin-top: 10px;
+}
+
+#animal-input {
+    color: forestgreen;
+    border: 1px solid forestgreen;
+    outline: none;
+}
+
+#add-animal {
+    background: url('../images/images.jpeg') no-repeat;
+    background-size: contain;
+    color: forestgreen;
+    border: 1px solid forestgreen;
+    outline: none;
+}
+
+button.animal {
+    background-image: linear-gradient(green, lightgreen, white);
+    margin: 5px;
+    padding: 2px 25px;
+    border-radius: 32px;
+    outline: none;
+}
+
+
+
+img {
+    border-radius: 5px;
+    border: 3px ridge green;
+    width: 300px;
+    height: 200px;
+    margin: 15px;
+}
+
+.divContainer {
+    float: left;
+}
+
+.divContainer p {
+    border-radius: 5px;
+    width: 300px;
+    background-color: green;
+    margin: 5px 5px 5px 15px;
+    ;
+    padding: 10px;
+    color: #fff;
+}
+
+
+#button-display {
+    border-radius: 5px;
+    background: url('../images/jungle.jpeg') no-repeat;
+    color: green;
+    background-color: #ccc;
+    padding: 5px;
+    margin-bottom: 50px;
+}
+
+
+#animals-view {
+    border-top: 1px solid #000;
+    background-color: #ccc;
+    margin-top: 50px;
+}

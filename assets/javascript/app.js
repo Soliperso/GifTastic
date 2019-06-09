@@ -6,7 +6,7 @@ const animals = ['Lion', 'Tiger', 'Monkey'];
 // Display animal's info
 function displayAnimalInfo() {
     let animal = $(this).attr('data-name');
-    let limit = 5;
+    let limit = 10;
     let queryURL = "https://api.giphy.com/v1/gifs/search?q=" + animal + "&api_key=FJj8POCZ4gSBtik9E546BCkk98fSnJ7d&" + limit;
 
     $.ajax({
@@ -15,17 +15,19 @@ function displayAnimalInfo() {
     }).then(function (response) {
         // Display 5 images and theri ratings when the correponding button is clicked
         for (let i = 0; i < limit; i++) {
+            let divContainer = $('<div>');
+            divContainer.addClass('divContainer')
             let img = $('<img>').attr("src", response.data[i].images.original_still.url);
             img.attr("data-animate", response.data[i].images.original.url);
             img.attr("data-state", "still");
             img.attr("class", "gif");
-            $('#animals-view').append(img);
+            divContainer.append(img);
 
             // Rating
             let rating = response.data[i].rating;
             let ratingP = $('<p>').text('Rating: ' + rating);
-            $('#animals-view').append(ratingP);
-
+            divContainer.append(ratingP);
+            console.log($('#animals-view').append(divContainer));
         }
     });
 }
@@ -33,18 +35,16 @@ function displayAnimalInfo() {
 // Images different states
 function changeImageState() {
     let state = $(this).attr("data-state");
-        let animateImage = $(this).attr("data-animate");
-        let stillImage = $(this).attr("data-still");
+    let animateImage = $(this).attr("data-animate");
+    let stillImage = $(this).attr("data-still");
 
-        if(state == "still") {
-            $(this).attr("src", animateImage);
-            $(this).attr("data-state", "animate");
-        }
-
-        else if(state == "animate") {
-            $(this).attr("src", stillImage);
-            $(this).attr("data-state", "still");
-        }   
+    if (state == "still") {
+        $(this).attr("src", animateImage);
+        $(this).attr("data-state", "animate");
+    } else if (state == "animate") {
+        $(this).attr("src", stillImage);
+        $(this).attr("data-state", "still");
+    }
 }
 
 
