@@ -19,6 +19,7 @@ function displayAnimalInfo() {
             divContainer.addClass('divContainer')
             let img = $('<img>').attr("src", response.data[i].images.original_still.url);
             img.attr("data-animate", response.data[i].images.original.url);
+            img.attr("data-still", response.data[i].images.original_still.url);
             img.attr("data-state", "still");
             img.attr("class", "gif");
             divContainer.append(img);
@@ -32,20 +33,6 @@ function displayAnimalInfo() {
     });
 }
 
-// Images different states
-function changeImageState() {
-    let state = $(this).attr("data-state");
-    let animateImage = $(this).attr("data-animate");
-    let stillImage = $(this).attr("data-still");
-
-    if (state == "still") {
-        $(this).attr("src", animateImage);
-        $(this).attr("data-state", "animate");
-    } else if (state == "animate") {
-        $(this).attr("src", stillImage);
-        $(this).attr("data-state", "still");
-    }
-}
 
 
 // Create a button for each animal searched for 
@@ -64,15 +51,39 @@ function createBtn() {
 $('#add-animal').on('click', function (event) {
     event.preventDefault();
 
-    // Prevents from submitting an empty form
-    if ($('#animal-input').val() !== '') {
-        let animal = $('#animal-input').val().trim().toLowerCase();
-        animals.push(animal);
+    // Prevents from adding a button more than once
+    if (animals.indexOf( $('#animal-input').val()) > -1) {
+        $('#animal-input').val("");
+        return
     }
 
+    // Prevents from submitting an empty form
+    if ($('#animal-input').val() !== '') {
+        let animal = $('#animal-input').val().trim();
+        animals.push(animal);
+        $('#animal-input').val("");
+    }
     createBtn();
-    $('.form-control').val('');
 });
+
+// Images different states
+function changeImageState() {
+    let state = $(this).attr("data-state");
+    let animateImage = $(this).attr("data-animate");
+    let stillImage = $(this).attr("data-still");
+
+    console.log(animateImage)
+    console.log(stillImage)
+
+    if (state === "still") {
+        $(this).attr("src", animateImage);
+        $(this).attr("data-state", "animate");
+    } else {
+        $(this).attr("src", stillImage);
+        $(this).attr("data-state", "still");
+    }
+}
+
 
 
 
@@ -80,5 +91,5 @@ $(document).on('click', '.animal', displayAnimalInfo);
 $(document).on("click", ".gif", changeImageState);
 
 
-// This shows the preexisting buttons before the user adds any
+// This shows the preexisting buttons before the user adds any button
 createBtn();
