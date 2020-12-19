@@ -13,7 +13,7 @@ function displayAnimalInfo() {
         url: queryURL,
         method: 'GET'
     }).then(function (response) {
-        // Display 5 images and theri ratings when the correponding button is clicked
+        // Display 5 images and their ratings when the corresponding button is clicked
         for (let i = 0; i < limit; i++) {
             let divContainer = $('<div>');
             divContainer.addClass('divContainer')
@@ -23,7 +23,7 @@ function displayAnimalInfo() {
             img.attr("data-state", "still");
             img.attr("class", "gif");
             divContainer.append(img);
-
+            
             // Rating
             let rating = response.data[i].rating;
             let ratingP = $('<p>').text('Rating: ' + rating);
@@ -83,8 +83,6 @@ function changeImageState() {
         $(this).attr("data-state", "still");
     }
 }
-
-
 
 
 $(document).on('click', '.animal', displayAnimalInfo);

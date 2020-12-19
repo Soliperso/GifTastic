@@ -1,128 +1,100 @@
-/* *******************************
-    GENERAL
-*********************************/
+/* ********** GENERAL ************/
 body {
-    margin-top: 10px;
+  margin-top: 10px;
 }
 
-/* *******************************
-    FORM INPUT
-*********************************/
+/* ********* FORM INPUT *********/
 #animal-input {
-    color: forestgreen;
-    border: 1px solid forestgreen;
-    outline: none;
+  color: forestgreen;
+  border: 1px solid forestgreen;
+  outline: none;
 }
 
 #plusBtn {
-    color: #fff;
-    background-color: forestgreen;
-    float: right;
-    border-radius: 50%;
-    padding: 5px;
+  color: #fff;
+  background-color: forestgreen;
+  float: right;
+  border-radius: 50%;
+  padding: 5px;
 }
 
-/* *******************************
-    SUBMIT BUTTON
-*********************************/
+/* ******* SUBMIT BUTTON *******/
 #add-animal {
-    background: url('../images/images.jpeg') no-repeat;
-    background-size: contain;
-    color: forestgreen;
-    border: 1px solid forestgreen;
-    outline: none;
+  background: url('../images/images.jpeg') no-repeat;
+  background-size: contain;
+  color: forestgreen;
+  border: 1px solid forestgreen;
+  outline: none;
 }
 
-/* *******************************
-    ANIMAL BUTTONS LIST 
-*********************************/
+/* **** ANIMAL BUTTONS LIST *****/
 button.animal {
-    background-image: linear-gradient(green, lightgreen, white);
-    margin: 5px;
-    padding: 2px 25px;
-    border-radius: 32px;
-    outline: none;
+  background-image: linear-gradient(green, lightgreen, white);
+  margin: 5px;
+  padding: 2px 25px;
+  border-radius: 32px;
+  outline: none;
 }
 
-
-/* *******************************
-    IMAGES STYLES
-*********************************/
+/* ***** IMAGES STYLES ******/
 img {
-    border-radius: 5px;
-    border: 10px ridge green;
-    width: 350px;
-    height: 200px;
-    margin: 15px;
+  width: 350px;
+  height: 200px;
+  margin: 15px;
+  border-radius: 5px;
+  border: 2px solid green;
+  box-shadow: 6px 7px 7px -4px #7d7316;
 }
 
-
-/* *******************************
-    IMAGE DIV CONTAINER
-*********************************/
+/* ****** IMAGE DIV CONTAINER ******/
 .divContainer {
-    float: left;
+  float: left;
 }
 
-
-/* *******************************
-    RATING PARAGRAPH
-*********************************/
+/* ****** RATING PARAGRAPH *******/
 .divContainer p {
-    width: 350px;
-    background-color: rgb(66, 196, 66);
-    margin: 5px 5px 5px 15px;
-    box-shadow: 2px 2px 2px #fff;
-    padding: 10px;
-    color: #fff;
-    text-shadow: 1px 1px 1px #000;
+  width: 350px;
+  background-color: rgb(116, 212, 116);
+  margin: 5px 5px 5px 15px;
+  box-shadow: 2px 2px 2px #fff;
+  padding: 10px;
+  color: #fff;
+  text-shadow: 1px 1px 1px #000;
 }
-
-
 
 #button-display {
-    border-radius: 5px;
-    background: url('../images/jungle.jpeg') no-repeat;
-    color: green;
-    background-color: #ccc;
-    padding: 5px;
-    margin-bottom: 50px;
+  border-radius: 5px;
+  background: url('../images/jungle.jpeg') no-repeat;
+  color: green;
+  background-color: #ccc;
+  padding: 5px;
+  margin-bottom: 50px;
 }
 
-/* *******************************
-    GIFS 
-*********************************/
+/* ****** GIFS *******/
 #animals-view {
-    border-top: 1px solid #ccc;
-    ;
-    background-color: #c3c3c3;
-    margin-top: 50px;
+  border-top: 1px solid #ccc;
+  background-color: #c3c3c3;
+  margin-top: 50px;
 }
 
-
-
-
-/* *******************************
-    RESPONSIVENESS
-*********************************/
+/* ****** Queries ***********/
 @media screen and (max-width: 768px) {
-    img,
-    .divContainer p {
-        width: 330px;
-    }
+  img,
+  .divContainer p {
+    width: 330px;
+  }
 }
-
 
 @media screen and (max-width: 375px) {
-    img {
-        width: 345px;
-    }
+  img {
+    width: 345px;
+  }
 }
 
-
 @media screen and (max-width: 900px) {
-    img,
-    .divContainer p {
-        width: 330px;
-    }
+  img,
+  .divContainer p {
+    width: 330px;
+  }
 }
