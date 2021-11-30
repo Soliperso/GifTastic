@@ -1,33 +1,61 @@
-/* ********** GENERAL ************/
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-  margin-top: 10px;
+  width: 100vw;
+  min-height: 100vh;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  color: #333;
+  background: url(https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80)
+    no-repeat center center fixed;
+  background-size: cover;
+  position: relative;
+  padding: 20px;
 }
 
-/* ********* FORM INPUT *********/
+body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(51, 104, 62, 0.5) 0%, rgba(11, 70, 45, 0.5) 100%);
+  z-index: -10;
+}
+
+.pictures-display {
+  border: 1px solid #000;
+  margin: 50px auto;
+  width: calc(100% - 40px);
+}
+
 #animal-input {
-  color: forestgreen;
-  border: 1px solid forestgreen;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  border: 1px solid #ccc;
   outline: none;
-}
-
-#plusBtn {
-  color: #fff;
-  background-color: forestgreen;
-  float: right;
-  border-radius: 50%;
-  padding: 5px;
+  width: 100%;
+  background-color: #fff;
 }
 
 /* ******* SUBMIT BUTTON *******/
 #add-animal {
-  background: url('../images/images.jpeg') no-repeat;
-  background-size: contain;
-  color: forestgreen;
-  border: 1px solid forestgreen;
-  outline: none;
+  width: 100%;
+  font-weight: bolder;
+  background-image: linear-gradient(green, lightgreen, rgb(43, 221, 132));
+  margin-top: 20px;
+  border: 2px solid green;
+  color: #fff;
 }
 
-/* **** ANIMAL BUTTONS LIST *****/
 button.animal {
   background-image: linear-gradient(green, lightgreen, white);
   margin: 5px;
@@ -36,65 +64,39 @@ button.animal {
   outline: none;
 }
 
-/* ***** IMAGES STYLES ******/
-img {
-  width: 350px;
-  height: 200px;
-  margin: 15px;
-  border-radius: 5px;
-  border: 2px solid green;
-  box-shadow: 6px 7px 7px -4px #7d7316;
+.pictures-display {
+  background-color: rgba(226, 226, 226, 0.164);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2), 0 0 20px rgba(0, 0, 0, 0.2);
+  border: none;
+  border-radius: 7px;
 }
 
-/* ****** IMAGE DIV CONTAINER ******/
-.divContainer {
-  float: left;
+#animals-view img {
+  width: 30rem;
+  height: 15rem;
+  margin: 20px;
+  border-radius: 7px;
+  box-shadow: 0 0 10px rgba(15, 131, 49, 0.2), 0 0 20px rgba(23, 139, 75, 0.5);
+  object-fit: cover;
 }
 
-/* ****** RATING PARAGRAPH *******/
 .divContainer p {
-  width: 350px;
-  background-color: rgb(116, 212, 116);
-  margin: 5px 5px 5px 15px;
-  box-shadow: 2px 2px 2px #fff;
-  padding: 10px;
-  color: #fff;
-  text-shadow: 1px 1px 1px #000;
+  display: none;
 }
 
-#button-display {
-  border-radius: 5px;
-  background: url('../images/jungle.jpeg') no-repeat;
-  color: green;
-  background-color: #ccc;
-  padding: 5px;
-  margin-bottom: 50px;
-}
-
-/* ****** GIFS *******/
 #animals-view {
-  border-top: 1px solid #ccc;
-  background-color: #c3c3c3;
-  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
-/* ****** Queries ***********/
-@media screen and (max-width: 768px) {
-  img,
-  .divContainer p {
-    width: 330px;
+@media (max-width: 768px) {
+  .pictures-display {
+    width: 100%;
   }
-}
-
-@media screen and (max-width: 375px) {
-  img {
-    width: 345px;
-  }
-}
-
-@media screen and (max-width: 900px) {
-  img,
-  .divContainer p {
-    width: 330px;
+  #animals-view img {
+    width: 25rem;
+    margin-left: -43px;
   }
 }
