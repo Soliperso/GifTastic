@@ -30,23 +30,6 @@ body::before {
   z-index: -10;
 }
 
-.pictures-display {
-  border: 1px solid #000;
-  margin: 50px auto;
-  width: calc(100% - 40px);
-}
-
-#animal-input {
-  padding: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  outline: none;
-  width: 100%;
-  background-color: #fff;
-}
-
-/* ******* SUBMIT BUTTON *******/
 #add-animal {
   width: 100%;
   font-weight: bolder;
@@ -64,39 +47,22 @@ button.animal {
   outline: none;
 }
 
-.pictures-display {
-  background-color: rgba(226, 226, 226, 0.164);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2), 0 0 20px rgba(0, 0, 0, 0.2);
-  border: none;
-  border-radius: 7px;
+#animals-view {
+  margin: 50px auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
 }
 
 #animals-view img {
-  width: 30rem;
-  height: 15rem;
-  margin: 20px;
+  width: 400px;
+  height: 12rem;
+  margin: 10px 5px;
   border-radius: 7px;
   box-shadow: 0 0 10px rgba(15, 131, 49, 0.2), 0 0 20px rgba(23, 139, 75, 0.5);
   object-fit: cover;
 }
-
 .divContainer p {
   display: none;
-}
-
-#animals-view {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-@media (max-width: 768px) {
-  .pictures-display {
-    width: 100%;
-  }
-  #animals-view img {
-    width: 25rem;
-    margin-left: -43px;
-  }
 }
